@@ -95,7 +95,6 @@ scene.widgetList={
     WIDGET.newSlider{name='sdarr',  x=250,    y=400,lim=230,w=140,axis={0,4,1}, disp=SETval('sdarr'),  show=_sliderShow,code=SETsto('sdarr')},
     WIDGET.newSlider{name='dascut', x=250,    y=470,lim=230,w=600,axis={0,20,1},disp=SETval('dascut'), show=_sliderShow,code=SETsto('dascut')},
     WIDGET.newSlider{name='dropcut',x=250,    y=540,lim=230,w=300,axis={0,10,1},disp=SETval('dropcut'),show=_sliderShow,code=SETsto('dropcut')},
-    WIDGET.newSwitch{name='ihs',    x=1100,   y=260,lim=300,                    disp=SETval('ihs'),    code=SETrev('ihs')},
     WIDGET.newSwitch{name='irs',    x=1100,   y=330,lim=300,                    disp=SETval('irs'),    code=SETrev('irs')},
     WIDGET.newSwitch{name='ims',    x=1100,   y=400,lim=300,                    disp=SETval('ims'),    code=SETrev('ims')},
     WIDGET.newButton{name='reset',  x=160,    y=640,w=200,h=100,color='lR',font=40,

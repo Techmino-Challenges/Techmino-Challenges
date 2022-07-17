@@ -332,6 +332,7 @@ function Player:act_softDrop()
 end
 function Player:act_hold()
     if not self.control then return end
+    if not self.bot then return end
     if self.cur then
         if self:hold()then
             self.keyPressing[8]=false
@@ -1361,6 +1362,7 @@ function Player:hold_swap(ifpre)
     self.stat.hold=self.stat.hold+1
 end
 function Player:hold(ifpre,force)
+    if not self.bot then return end
     if self.holdTime>0 and(self.cur or ifpre or force)then
         if self.gameEnv.holdMode=='hold'then
             self:hold_norm(ifpre)

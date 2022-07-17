@@ -136,6 +136,7 @@ local function _checkGameKeyDown(key)
 end
 
 function scene.sceneInit()
+    SETTING['ihs']=false
     if GAME.init then
         resetGameData()
         GAME.init=false

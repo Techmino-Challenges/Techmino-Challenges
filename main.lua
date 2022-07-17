@@ -20,6 +20,7 @@
 
 --System Global Vars Declaration
 local fs=love.filesystem
+fs.setIdentity("TechC2")
 VERSION=require"version"
 TIME=love.timer.getTime
 YIELD=coroutine.yield
