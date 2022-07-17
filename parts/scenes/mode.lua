@@ -28,7 +28,10 @@ local touchDist
 
 local scene={}
 
+local totalGrade
+
 function scene.sceneInit()
+    totalGrade=0
     BG.set()
     mapCam.zoomK=SCN.prev=='main'and 5 or 1
     visibleModes={}--1=unlocked, 2=locked but visible
@@ -40,6 +43,7 @@ function scene.sceneInit()
                     visibleModes[M.unlock[i]]=visibleModes[M.unlock[i]]or 2
                 end
             end
+            totalGrade=totalGrade+(RANKS[name]<0 and 0 or RANKS[name])
         end
     end
 end
@@ -220,6 +224,8 @@ local function _drawModeShape(M,S,drawType)
     end
 end
 function scene.draw()
+    setFont(50)
+    mStr("Total Grade: "..tostring(totalGrade),240,20)
     local _
     gc_push('transform')
     gc_translate(640,360)
