@@ -111,6 +111,8 @@ local loadingThread=coroutine.wrap(function()
     SFX.play('enter',.8)
     SFX.play('welcome')
     VOC.play('welcome')
+    MES.new('info',"[CHALLENGE 2] No Hold")
+    MES.new('info',"Good luck!")
     THEME.fresh()
     LOADED=true
     saveStats()
