@@ -39,7 +39,7 @@ end
 
 function scene.resize()
     local qpModeName=text.modes[STAT.lastPlay]and text.modes[STAT.lastPlay][1]or"["..STAT.lastPlay.."]"
-    scene.widgetList[2]:setObject(text.WidgetText.main.qplay..": "..qpModeName)
+    scene.widgetList[2]:setObject(text.WidgetText.main.qplay..qpModeName)
 end
 
 function scene.mouseDown(x,y)
@@ -128,6 +128,7 @@ function scene.keyDown(key,isRep)
 end
 
 function scene.update(dt)
+    if dt>.26 then return end
     PLAYERS[1]:update(dt)
     scrollX=scrollX-162*dt
     if scrollX<-tip:getWidth()then
